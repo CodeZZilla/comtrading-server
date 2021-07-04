@@ -1,6 +1,6 @@
 "use strict";
 
-var filterDefaults = {
+let filterDefaults = {
     UNKNOWN: 'НЕ_ОБРАБОТАНО',
     CONFIRMED: 'ПОДТВЕРЖДЕНО',
     GOOD: 'ТОЧНОЕ_СОВПАДЕНИЕ',
