@@ -38,8 +38,8 @@
             data-id-field="id"
             data-page-list="[10, 25, 50, 100]"
             data-show-footer="false"
-            data-side-pagination="server"
-            data-url="/loadTable">
+            data-side-pagination="client"
+            data-url="/getAllData">
         <thead>
         <tr>
             <th data-field="feedId" data-sortable="true">ID</th>
@@ -71,6 +71,6 @@
 <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
 
 <!-- Скрипт обработки форм -->
-<!--<script type="text/javascript" th:src="@{/js/panel.js}"></script>-->
+<script type="text/javascript" th:src="@{/js/panel2.js}"></script>
 </body>
 </html>

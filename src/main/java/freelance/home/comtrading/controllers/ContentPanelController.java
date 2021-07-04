@@ -7,6 +7,7 @@ import freelance.home.comtrading.domain.item.TableRecord;
 import freelance.home.comtrading.manager.*;
 import freelance.home.comtrading.service.ConfigService;
 import freelance.home.comtrading.service.ItemService;
+import freelance.home.comtrading.service.ItemService2;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.List;
 
 @RestController
 @AllArgsConstructor
@@ -28,6 +30,7 @@ public class ContentPanelController {
     private final GoogleSearchManager googleSearchManager;
     private final CacheProcessingManager cacheProcessingManager;
     private final ExportToCSVManager exportToCSVManager;
+    private final ItemService2 itemService2;
 
     @CrossOrigin
     @ResponseStatus(code = HttpStatus.OK)
@@ -95,5 +98,11 @@ public class ContentPanelController {
 
         //exportToCSVManager.findHotLineUrs();
         //System.out.println(itemService.getNotFilledItems(10));
+    }
+
+
+    @RequestMapping(value = "/getAllData", method = {RequestMethod.GET}, produces = {"application/json"})
+    public List<Item> getAllData(){
+        return itemService2.findAll();
     }
 }

@@ -23,9 +23,6 @@ public class MainController {
         return "panel2";
     }
 
-    @RequestMapping(value = "/getAllData", method = {RequestMethod.GET})
-    public List<Item> getAllData(){
-        return itemService2.findAll();
-    }
+
 
 }
