@@ -1,5 +1,6 @@
 package freelance.home.comtrading.domain.item;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

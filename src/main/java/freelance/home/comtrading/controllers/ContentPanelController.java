@@ -88,7 +88,7 @@ public class ContentPanelController {
         //обработка общих фидов
         //importManager.importFeed();
 
-        googleSearchManager.findHotLineUrs();
+        //googleSearchManager.findHotLineUrs();
 
         //cacheProcessingManager.findHotLineUrs();
 
